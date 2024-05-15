@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  gestor-projeto-db:
+    image: mysql:latest
+    container_name: gestor-projeto-db
+    environment:
+      MYSQL_ROOT_PASSWORD: "gestorProjeto123"
+      MYSQL_DATABASE: "gestor-projeto-db"
+      MYSQL_USER: "gestorProjeto"
+      MYSQL_PASSWORD: "gestorProjeto123"
+    ports:
+      - "3306:3306"
+    networks:
+      - gestor-projeto-network
+
+networks:
+  gestor-projeto-network:
+    driver: bridge
