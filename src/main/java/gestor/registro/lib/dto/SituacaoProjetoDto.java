@@ -15,4 +15,5 @@ public class SituacaoProjetoDto {
 	private String nmSituacaoProjeto;
 	private Integer inAtivo;
 	private LocalDateTime dtInclusao;
+	private String dtInclusaoSaida;
 }

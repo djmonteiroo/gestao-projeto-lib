@@ -27,23 +27,23 @@ public class EquipeProjeto {
     @Id
     @Column(name = "id_equipe_projeto")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long idEquipe;
-    
+    private Long idEquipe;
+
     @ManyToOne
-    @JoinColumn(name = "id_responsavel_projeto")
+    @JoinColumn(name = "id_colaborador")
     @NotNull
-    private ResponsavelProjeto responsavelEquipe;
-    
+    private Colaborador responsavelEquipe;
+
     @Column(name = "nm_equipe")
     private String nmEquipe;
-    
+
     @Column(name = "in_ativo")
     private Integer inAtivo;
-    
+
     @Column(name = "dt_inclusao")
     private LocalDateTime dtInclusao;
-    
+
     @OneToMany(mappedBy = "equipeProjeto")
     private Set<Projeto> equipeProjeto;
-    
+
 }

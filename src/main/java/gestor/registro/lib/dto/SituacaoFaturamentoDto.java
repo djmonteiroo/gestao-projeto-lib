@@ -15,4 +15,5 @@ public class SituacaoFaturamentoDto {
 	private String nmSituacaoFaturamento;
 	private Integer inAtivo;
 	private LocalDateTime dtInclusao;
+	private String dtInclusaoSaida;
 }

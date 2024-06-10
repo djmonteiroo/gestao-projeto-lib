@@ -60,9 +60,9 @@ public class Projeto {
     private EquipeProjeto equipeProjeto;
 
     @ManyToOne
-    @JoinColumn(name = "id_responsavel_projeto")
+    @JoinColumn(name = "id_colaborador")
     @NotNull
-    private ResponsavelProjeto responsavelProjeto;
+    private Colaborador colaborador;
 
     @Column(name = "vl_total")
     private Double valorTotal;

@@ -2,6 +2,8 @@ package gestor.registro.lib.utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,5 +55,11 @@ public class GestaoProjetoUtils {
 		}
 		
 		return msg.toString();
+	}
+
+	public static String tratamentoSaidaData(final LocalDateTime dtTratamento) {
+		String outputPattern = "dd/MM/yyyy HH:mm";
+		DateTimeFormatter inputFormatter = DateTimeFormatter.ofPattern(outputPattern);
+		return dtTratamento.format(inputFormatter);
 	}
 }

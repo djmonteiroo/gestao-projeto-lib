@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class EquipeProjetoDto {
 
-	private Long idResponsavelProjeto;
+	private Long idColaborador;
 	private String nmEquipe;
 	private Integer inAtivo;
 	private LocalDateTime dtInclusao;
